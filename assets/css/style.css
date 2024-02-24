@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=The+Nautigal:wght@400;700&display=swap');
 
@@ -5,38 +12,31 @@
     --bg-color: #e2c4b5;
     --bg-secondary-color: #e0c1b1;
     --button-color: #eeeeee;
-    --primary-color: #C39F59;
+    --primary-color: #a15737;
 }
 
 body {
   background-color: var(--bg-color);
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
+  background: -o-radial-gradient(top,circle,transparent 60%, var(--bg-secondary-color) 61%,var(--bg-secondary-color) 66%, transparent 67%),-o-radial-gradient(bottom,circle,transparent 60%, var(--bg-secondary-color) 61%,var(--bg-secondary-color) 66%, transparent 67%),-o-radial-gradient(left,circle,transparent 60%, var(--bg-secondary-color) 61%,var(--bg-secondary-color) 66%, transparent 67%),-o-radial-gradient(right,circle,transparent 60%, var(--bg-secondary-color) 61%,var(--bg-secondary-color) 66%, transparent 67%);
   background: radial-gradient(circle at top,transparent 60%, var(--bg-secondary-color) 61%,var(--bg-secondary-color) 66%, transparent 67%),radial-gradient(circle at bottom,transparent 60%, var(--bg-secondary-color) 61%,var(--bg-secondary-color) 66%, transparent 67%),radial-gradient(circle at left,transparent 60%, var(--bg-secondary-color) 61%,var(--bg-secondary-color) 66%, transparent 67%),radial-gradient(circle at right,transparent 60%, var(--bg-secondary-color) 61%,var(--bg-secondary-color) 66%, transparent 67%);
   background-size: 2em 2em;
   background-color: var(--bg-color);
   opacity: 1;
   margin: 0;
-  overflow: hidden;
 }
 
-h2, h3 {
+h2 {
     font-family: "Merriweather", serif;
 }
 
-h3 {
+h2 {
     color: #7c7c7c;
 }
 
 .logo {
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-.logo img {
-    width: 60%;
-    max-width: 300px;
 }
 
 .menu {
@@ -54,7 +54,7 @@ h3 {
     margin: 8px auto;
     width: 90%;
     max-width: 500px;
-    border-bottom: 3px solid #9b7c40;
+    border-bottom: 3px solid var(--primary-color);
     /*border-radius: 5px;*/
 }
 
@@ -67,9 +67,15 @@ h3 {
   font-weight: 600;
   /*box-shadow: 3px 4px 3px rgba(0,0,0,0.2);*/
   color: var(--primary-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow: hidden;
 }
 
@@ -88,14 +94,22 @@ h3 {
 }
 
 .list__item span {
-    flex: 4;
+    -webkit-box-flex: 4;
+        -ms-flex: 4;
+            flex: 4;
 }
 
 .list__item-icon {
     padding: 10px 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background: var(--primary-color);
     color: white;
 }
@@ -108,11 +122,13 @@ h3 {
     right: 0;
     position: fixed;
     margin-top: 100vh;
+    -webkit-transition: all 0.55s ease-in-out;
+    -o-transition: all 0.55s ease-in-out;
     transition: all 0.55s ease-in-out;
     overflow-y: scroll;
 }
 
-.modal h3 {
+.modal h2 {
     text-align: center;
     margin: 30px 0;
 }
@@ -121,9 +137,15 @@ h3 {
     position: absolute;
     right: 5px;
     top: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 20px;
     width: 20px;
     height: 20px;
@@ -138,12 +160,17 @@ h3 {
     background: var(--primary-color);
     padding: 20px 15px;
     color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
-.modal-header h2 {
+.modal-header h1 {
     margin: 0;
+    font-size: 1.5em;
 }
 
 .modal-header svg {
@@ -164,7 +191,7 @@ h3 {
 .logo {
     width: 60%;
     margin-top: 100px;
-    max-width: 350px;;
+    max-width: 350px;
 }
 
 .service {
@@ -177,6 +204,8 @@ h3 {
     -webkit-backdrop-filter: blur(10px);
     background-position: center;
     position: relative;
+    -webkit-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
     transition: all 1s ease-in;
     margin-bottom: 20px;
 }
@@ -193,34 +222,62 @@ h3 {
     right: 0;
     bottom: 0;
     background: rgb(125 125 125 / 70%);
-    filter: blur(1px);
-    backdrop-filter: blur(1px);
+    -webkit-filter: blur(1px);
+            filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+            backdrop-filter: blur(1px);
 }
 
 .service__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 100%;
     color: white;
 }
-.service__content h1 {
+.service__content h3 {
     text-transform: uppercase;
     font-weight: 300;
+    font-size: 2em;
     margin: 0 0 0 0;
+    -webkit-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
 }
 
 .service__content p {
     opacity: 0;
+    -webkit-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
     margin: 0;
 }
 
-.service__content:hover h1 {
+.service__content:hover h3 {
     margin-top: -15px;
 }
 
 .service__content:hover p {
     opacity: 1;
+}
+
+.modalToggle {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+}
+
+.modalToggle > div {
+    width: 100%;
 }

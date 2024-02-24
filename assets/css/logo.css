@@ -1,49 +1,108 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .logo-T {
-    animation: tpart 0.7s ease-in-out forwards;
+    -webkit-animation: tpart 0.7s ease-in-out forwards;
+            animation: tpart 0.7s ease-in-out forwards;
 }
 
 .logo-K {
-    animation: kpart 0.7s ease-in-out forwards;
+    -webkit-animation: kpart 0.7s ease-in-out forwards;
+            animation: kpart 0.7s ease-in-out forwards;
 }
 
 .write-on {
-    animation: writer 1s ease forwards;
-    animation-delay: var(--d);
+    -webkit-animation: writer 1s ease forwards;
+            animation: writer 1s ease forwards;
+    -webkit-animation-delay: var(--d);
+            animation-delay: var(--d);
     opacity: 0;
 }
 
-@keyframes writer {
+@-webkit-keyframes writer {
     0% {
-        transform: translateY(-7%);
+        -webkit-transform: translateY(-7%);
+                transform: translateY(-7%);
         opacity: 0;
     }
 
     100% {
-        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+                transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes writer {
+    0% {
+        -webkit-transform: translateY(-7%);
+                transform: translateY(-7%);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0%);
+                transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes tpart {
+    0% {
+        -webkit-transform: translateX(-15%);
+                transform: translateX(-15%);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
         opacity: 1;
     }
 }
 
 @keyframes tpart {
     0% {
-        transform: translateX(-15%);
+        -webkit-transform: translateX(-15%);
+                transform: translateX(-15%);
         opacity: 0;
     }
 
     100% {
-        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes kpart {
+    0% {
+        -webkit-transform: translateX(15%);
+                transform: translateX(15%);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
         opacity: 1;
     }
 }
 
 @keyframes kpart {
     0% {
-        transform: translateX(15%);
+        -webkit-transform: translateX(15%);
+                transform: translateX(15%);
         opacity: 0;
     }
 
     100% {
-        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
         opacity: 1;
     }
 }
